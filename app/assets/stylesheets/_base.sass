@@ -1,17 +1,35 @@
-.top-block
+nav
   background-color: #597297
-  padding: 10px 0
-  margin: 0 0 10px 0
 
-  .top-block-info
-    color: #fff
-
-    span
-      +inline-block
-      font-size: 20px
+  &.navbar, .container, .container-fluid
+    min-height: 70px
+    background-color: #597297
 
 .content
   margin-top: 85px
+
+  .info_banner
+    background-color: #f7f7f7
+    padding: 15px
+
+    .banner_header
+      font-size: 18px
+
+  .left-menu
+    li
+      font-size: 18px
+
+      a
+        +border-radius(0)
+
+    a
+      //color: #00298a
+      font-weight: bold
+      font-size: 16px
+
+      &:hover
+        text-decoration: none
+        background-color: #cbd5e6
 
 .button
   display: block
@@ -30,4 +48,3 @@
   &:focus, &:active, &:hover
     text-decoration: none
     color: #fff
-

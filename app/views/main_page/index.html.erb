@@ -1,36 +1,43 @@
 <!-- fixed top bar -->
-<div class="container-fluid top-block navbar navbar-fixed-top">
-  <div class="container">
-    <div class="row">
-      <div class="col-xs-4 bar">
-        <%= image_tag 'logo.png' %>
+<nav class="navbar navbar-default navbar-fixed-top nav-justified">
+  <div class="container-fluid">
+    <div class="container">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="#">
+          <%=image_tag "logo.png", size: '184x40'%>
+        </a>
       </div>
-      <div class="col-xs-5 col-xs-offset-3 top-block-info">
-        <span class='phone'>
-          +7 (978) 05 09 333
-        </span>
-        <span>
-          <%= link_to 'Заказать звонок', '#', :class => 'js-button-require-call button' %>
-        </span>
-      </div>
+      <%= link_to 'заказать сейчас', '#', :class => 'btn btn-default navbar-btn navbar-right' %>
+      <p class='navbar-text navbar-right'>+7 (978) 05 09 333</p>
     </div>
   </div>
-</div>
+</nav>
 
 <!-- content row -->
 <div class="container content">
-  <div class="row">
-    <div class="col-xs-3">
-      <ul class="nav nav-pills nav-stacked">
-        <li>Цены</li>
-        <li>Пункты проката</li>
-        <li>Технические характеристики</li>
-        <li>Условия проката</li>
-        <li>Контакты</li>
-      </ul>
+  <div class="col-xs-3">
+    <div class="row affix">
+      <div class="row">
+        <div class="info_banner center-block col-xs-9">
+          <div class='banner_header'>VPROKATE.INFO</div>
+          <div class='banner_content'>Прокат Велосипедов и мопедов в Севастополе</div>
+        </div>
+      </div>
+      <!-- navigation -->
+      <div class="row">
+        <ul class="nav nav-pills nav-stacked left-menu col-xs-9">
+          <li><%= link_to 'Цены', '#' %></li>
+          <li><%= link_to 'Пункты проката', '#' %></li>
+          <li><%= link_to 'Технические характеристики', '#' %></li>
+          <li><%= link_to 'Условия проката', '#' %></li>
+          <li><%= link_to 'Kонтакты', '#' %></li>
+        </ul>
+      </div>
     </div>
-    <div class="col-xs-9">
-      content
-    </div>
+  </div>
+  <div class="col-xs-9">
+    <% 40.times do %>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    <% end %>
   </div>
 </div>
