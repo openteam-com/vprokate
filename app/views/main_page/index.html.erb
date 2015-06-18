@@ -1,1 +1,36 @@
-111
+<!-- fixed top bar -->
+<div class="container-fluid top-block navbar navbar-fixed-top">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-4 bar">
+        <%= image_tag 'logo.png' %>
+      </div>
+      <div class="col-xs-5 col-xs-offset-3 top-block-info">
+        <span class='phone'>
+          +7 (978) 05 09 333
+        </span>
+        <span>
+          <%= link_to 'Заказать звонок', '#', :class => 'js-button-require-call button' %>
+        </span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- content row -->
+<div class="container content">
+  <div class="row">
+    <div class="col-xs-3">
+      <ul class="nav nav-pills nav-stacked">
+        <li>Цены</li>
+        <li>Пункты проката</li>
+        <li>Технические характеристики</li>
+        <li>Условия проката</li>
+        <li>Контакты</li>
+      </ul>
+    </div>
+    <div class="col-xs-9">
+      content
+    </div>
+  </div>
+</div>
