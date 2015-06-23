@@ -3,41 +3,114 @@
   <div class="container-fluid">
     <div class="container">
       <div class="navbar-header">
-        <a class="navbar-brand" href="#">
+        <a class="navbar-brand logo" href="#">
           <%=image_tag "logo.png", size: '184x40'%>
         </a>
       </div>
-      <%= link_to 'заказать сейчас', '#', :class => 'btn btn-default navbar-btn navbar-right' %>
-      <p class='navbar-text navbar-right'>+7 (978) 05 09 333</p>
+      <div class="collapse navbar-collapse">
+        <%= link_to 'заказать сейчас', '#', :class => 'btn btn-default navbar-btn navbar-right order-button' %>
+        <p class='navbar-text navbar-right phone'>+7 (978) 05 09 333</p>
+      </div>
     </div>
   </div>
 </nav>
 
 <!-- content row -->
-<div class="container content">
-  <div class="col-xs-3">
-    <div class="row affix">
-      <div class="row">
-        <div class="info_banner center-block col-xs-9">
-          <div class='banner_header'>VPROKATE.INFO</div>
-          <div class='banner_content'>Прокат Велосипедов и мопедов в Севастополе</div>
+<div class="container main-container">
+  <div class="row">
+    <!-- navigation -->
+    <div class="col-sm-4 col-md-3 col-lg-3 hidden-xs left-block">
+      <ul class="nav nav-pills nav-stacked navigation">
+        <div class="info-banner center-block">
+          <div class='banner-header'>VPROKATE.INFO</div>
+          <div class='banner-content'>Прокат Велосипедов и мопедов в Севастополе</div>
+        </div>
+        <li class='first'><%= link_to 'Цены', '#' %></li>
+        <li><%= link_to 'Пункты проката', '#' %></li>
+        <li><%= link_to 'Технические характеристики', '#' %></li>
+        <li><%= link_to 'Условия проката', '#' %></li>
+        <li><%= link_to 'Kонтакты', '#' %></li>
+      </ul>
+    </div>
+    <!-- /navigation -->
+
+    <!-- images -->
+    <div class="col-xs-12 col-sm-8 col-md-9 col-lg-9 right-block">
+      <div class="row image-wrapper">
+        <div class="col-xs-12 cols-sm-12 col-md-6 col-lg-6">
+          <div class="bicycle">
+            <div class="center-block title">Велосипед TXED AF-17 26'</div>
+            <%= image_tag 'bicycle.jpg',class: "img-responsive" %>
+          </div>
+        </div>
+        <div class="col-xs-12 cols-sm-12 col-md-6 col-lg-6">
+          <div class="motorbike">
+            <div class="center-block title">Мопед Racer Lupus 50</div>
+            <%= image_tag 'motorbike.jpg',class: "img-responsive" %>
+          </div>
         </div>
       </div>
-      <!-- navigation -->
+      <! -- /images -->
+
+      <!-- table -->
       <div class="row">
-        <ul class="nav nav-pills nav-stacked left-menu col-xs-9">
-          <li><%= link_to 'Цены', '#' %></li>
-          <li><%= link_to 'Пункты проката', '#' %></li>
-          <li><%= link_to 'Технические характеристики', '#' %></li>
-          <li><%= link_to 'Условия проката', '#' %></li>
-          <li><%= link_to 'Kонтакты', '#' %></li>
-        </ul>
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+          <div class="table-responsive">
+            <h2 class="header">ЦЕНЫ</h2>
+            <table class="table table-bordered table-hover price-table">
+              <thead>
+                <th>Модель</th>
+                <th>за 1 час </th>
+                <th>на 1-5 дней</th>
+                <th>на 6-13 дней</th>
+                <th>свыше 13 дней</th>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Велосипед TXED AF-17 26'</td>
+                  <td>100</td>
+                  <td>290</td>
+                  <td>250</td>
+                  <td>200</td>
+                </tr>
+                <tr>
+                  <td>Мопеды Racer Lupus 50</td>
+                  <td>300</td>
+                  <td>950</td>
+                  <td>750</td>
+                  <td>650</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <span class='colored'>* Есть детские велосипеды и кресла. Цена договорная, бронируйте заранее.</span>
+        </div>
       </div>
+      <!-- /table -->
+
+      <!-- order -->
+      <div class="row">
+        <div class="col-xs-11 col-xs-offset-1">
+          <div class="row">
+            <div class="order">
+              <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 left">
+                <div class="pull-right">
+                  <p class="colored title">
+                    Бесплатная доставка!
+                  </p>
+                  <p class="colored title">
+                    Бесплатно в комплекте мотошлем, защитный трос и бак бензина!
+                  </p>
+                </div>
+                <div class="arrow-box"> </div>
+              </div>
+              <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 right">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- /order -->
     </div>
-  </div>
-  <div class="col-xs-9">
-    <% 40.times do %>
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-    <% end %>
   </div>
 </div>

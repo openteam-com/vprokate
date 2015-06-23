@@ -1,50 +1,97 @@
-nav
-  background-color: #597297
+$main_color: #cad7e7
 
-  &.navbar, .container, .container-fluid
-    min-height: 70px
+body
+  font-family: "Tahoma", sans, sans-serif
+
+nav
+  .container-fluid
     background-color: #597297
 
-.content
-  margin-top: 85px
+    .logo
+      height: 60px
+      padding: 10px 10px
 
-  .info_banner
-    background-color: #f7f7f7
-    padding: 15px
+    .phone
+      font-size: 21px
+      color: white
 
-    .banner_header
-      font-size: 18px
-
-  .left-menu
-    li
-      font-size: 18px
-
-      a
-        +border-radius(0)
-
-    a
-      //color: #00298a
-      font-weight: bold
-      font-size: 16px
+    .order-button
+      background-color: #ed3f40
+      color: white
+      border: 0
+      text-transform: uppercase
+      margin: 10px 0 10px 15px
+      font-size: 20px
+      +box-shadow(0px 2px 0px 0px #b6173f)
 
       &:hover
-        text-decoration: none
-        background-color: #cbd5e6
+        background-color: #b6173f
 
-.button
-  display: block
-  background-color: #e42d46
-  color: #fff
-  padding: 10px 15px
-  vertical-align: top
-  margin: 0 0 0 10px
-  +box-shadow(0px 2px 0px 0px #b6173f)
-  +border-radius(3px)
-  text-transform: uppercase
+.main-container
+  margin-top: 60px
 
-  &:hover
-    background-color: #b6173f
+  .left-block
 
-  &:focus, &:active, &:hover
-    text-decoration: none
-    color: #fff
+    .navigation
+      margin-top: 15px
+      border-bottom: 1px solid #cad7e7
+
+      li
+        &.first
+          border-top: 1px solid #cad7e7
+
+        a
+          color: #42679e
+          font-weight: bold
+          font-size: 20px
+          padding: 10px 0
+
+          &:hover
+            background-color: #f7f7f7
+
+      .info-banner
+        background-color: #f7f7f7
+        padding: 10px
+        margin-bottom: 15px
+
+        .banner-header
+          font-size: 18px
+
+  .right-block
+    border-right: 1px solid #cad7e7
+    border-left: 1px solid #cad7e7
+
+    .image-wrapper
+      margin: 50px -15px 20px
+
+      .bicycle, .motorbike
+        border: 2px solid #cad7e7
+
+        .title
+          text-align: center
+          background-color: #cad7e7
+          color: #2a5893
+          font-size: 21px
+          padding: 5px 0
+
+    .header
+      color: #285991
+
+    .price-table
+      color: #285994
+
+      thead
+        color: black
+
+    .colored
+      color: #ed3f40
+
+    .order
+      margin-top: 15px
+      background-color: $main_color
+      margin-right: 15px
+      +clearfix
+
+      .title
+        font-weight: bold
+        font-size: 16px
