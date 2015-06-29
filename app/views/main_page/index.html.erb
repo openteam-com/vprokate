@@ -107,10 +107,10 @@
 
               <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 right">
                 <div class="pull-right">
-                  <h3>
+                  <h3 class='hidden-xs hidden-sm'>
                     ДО КОНЦА АКЦИИ ОСТАЛОСЬ
                   </h3>
-                  <div class="js-countdown"></div>
+                  <div class="js-countdown hidden-xs hidden-sm"></div>
                 </div>
               </div>
             </div>
@@ -123,6 +123,26 @@
                   <div class='type-title'>Велосипед TXED AF-17 26'</div>
                   <div class='new_price'>230<div class='upper'>руб.</div></div>
                   <div class='old_price'>290<div class='upper'>руб.</div></div>
+                </div>
+                <div class="col-xs-12 col-sm-12 col-md-2 col-lg-2">
+                  <%= link_to 'Заказать сейчас', '#', class: [:btn, 'btn-default', 'order-button', :large]  %>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <div style='border: 1px solid #fff;'></div>
+              </div>
+            </div>
+            <div class="order no-mrg-top">
+              <div class="row row-custom-margin">
+                <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
+                  <%= image_tag 'motorbike.jpg', class: "img-responsive" %>
+                </div>
+                <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+                  <div class='type-title'>Мопед Racer Lupus 50</div>
+                  <div class='new_price'>750<div class='upper'>руб.</div></div>
+                  <div class='old_price'>950<div class='upper'>руб.</div></div>
                 </div>
                 <div class="col-xs-12 col-sm-12 col-md-2 col-lg-2">
                   <%= link_to 'Заказать сейчас', '#', class: [:btn, 'btn-default', 'order-button', :large]  %>
