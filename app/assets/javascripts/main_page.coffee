@@ -1,2 +1,2 @@
 $ ->
-  #$('.js-fixed-wrapper').affix offset: top: 100
+  clock = $('.js-countdown').FlipClock()

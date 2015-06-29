@@ -1,4 +1,5 @@
 $main_color: #cad7e7
+$title_color: #285994
 
 body
   font-family: "Tahoma", sans, sans-serif
@@ -14,18 +15,6 @@ nav
     .phone
       font-size: 21px
       color: white
-
-    .order-button
-      background-color: #ed3f40
-      color: white
-      border: 0
-      text-transform: uppercase
-      margin: 10px 0 10px 15px
-      font-size: 20px
-      +box-shadow(0px 2px 0px 0px #b6173f)
-
-      &:hover
-        background-color: #b6173f
 
 .main-container
   margin-top: 60px
@@ -89,18 +78,52 @@ nav
       color: #ed3f40
 
     .order
+      +clearfix
       margin-top: 15px
       background-color: $main_color
       margin-right: 15px
-      +clearfix
+
+      &.no-mrg-top
+        margin-top: 0
+
+      .row-custom-margin
+        margin: 40px 0 10px 5px
+
+      .type-title
+        color: $title_color
+        font-size: 19px
+
+      .old_price, .new_price
+        float: left
+
+        div
+          font-size: 18px
+          margin: 9px 0 0 0
+          float: right
+
+      .old_price
+        margin: 20px 0 0 18px
+        font-size: 35px
+
+      .new_price
+        font-size: 50px
 
       .title
         font-weight: bold
         font-size: 16px
 
+      p.title
+        margin: 0
+
+        &:first-child
+          margin-top: 10px
+
+        &:last-child
+          margin-bottom: 10px
+
       .left, .right
-        padding-left: 0
-        padding-right: 60px
+        padding-left: 20px
+        padding-right: 30px
 
     .map-wrapper
       margin-top: 25px
