@@ -1,0 +1,17 @@
+<% if flash[:notice] %>
+  <div class="alert alert-success alert-dismissible" role="alert">
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+    <%= flash[:notice] %>
+  </div>
+<% end %>
+<%= simple_form_for [:manage, @page_meta], html: {class: '.form-inline' } do |f| %>
+  <%= f.input :title %>
+  <%= f.input :keywords %>
+  <%= f.input :description %>
+  <%= f.input :og_title %>
+  <%= f.input :og_description %>
+  <%= f.input :introduction %>
+  <%= f.input :og_image %>
+  <%= image_tag @page_meta.og_image_url, class: 'img-responsive' %>
+  <%= f.submit 'Сохранить' %>
+<% end %>

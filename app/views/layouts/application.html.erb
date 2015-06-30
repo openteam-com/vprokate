@@ -1,7 +1,12 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Vprokate</title>
+  <title><%= page_meta.title %></title>
+   <meta name='keywords' content='<%= page_meta.keywords %>' />
+   <meta name='description' content='<%= page_meta.description %>' />
+   <meta property="og:title" content='<%= page_meta.og_title %>' />
+   <meta property="og:description" content='<%= page_meta.og_description %>' />
+   <meta property="og:image" content='<%= page_meta.og_image_url %>' />
   <%= stylesheet_link_tag    'application', media: 'all' %>
   <%= javascript_include_tag 'application' %>
   <meta name="viewport" content="width=device-width, initial-scale=1">
