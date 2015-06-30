@@ -1,5 +1,10 @@
 $ ->
-  clock = $('.js-countdown').FlipClock({
+  finalDay = new Date($('.js-timer-info').attr('data-date'))
+  now = new Date()
+  date_difference = finalDay/1000 - now.getTime()/1000
+
+
+  clock = $('.js-countdown').FlipClock(date_difference,{
     clockFace: 'DailyCounter'
     countdown: true
     language: 'russian'

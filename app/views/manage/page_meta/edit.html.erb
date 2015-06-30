@@ -5,13 +5,29 @@
   </div>
 <% end %>
 <%= simple_form_for [:manage, @page_meta], html: {class: '.form-inline' } do |f| %>
-  <%= f.input :title %>
-  <%= f.input :keywords %>
-  <%= f.input :description %>
-  <%= f.input :og_title %>
-  <%= f.input :og_description %>
-  <%= f.input :introduction %>
-  <%= f.input :og_image %>
-  <%= image_tag @page_meta.og_image_url, class: 'img-responsive' %>
-  <%= f.submit 'Сохранить' %>
+  <div class="row">
+    <div class="col-lg-12">
+      <h2>Мета описание:</h2>
+      <%= f.input :title %>
+      <%= f.input :keywords %>
+      <%= f.input :description %>
+      <%= f.input :og_title %>
+      <%= f.input :og_description %>
+      <%= f.input :introduction %>
+      <%= f.input :og_image %>
+      <%= image_tag @page_meta.og_image_url, class: 'img-responsive' %>
+      <%= f.submit 'Сохранить' %>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-lg-6">
+      <h2>Не знаю как это назвать:</h2>
+      <%= f.input :discount_amount %>
+      <%= f.input :bicycle_price %>
+      <%= f.input :motorbike_price %>
+      <%= f.input :end_day %>
+      <%= f.submit 'Сохранить' %>
+    </div>
+  </div>
 <% end %>

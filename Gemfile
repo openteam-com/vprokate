@@ -13,6 +13,7 @@ group :default do
   gem 'simple_form'
   gem 'paperclip'
   gem 'paperclip-elvfs'
+  gem 'russian'
   gem 'sdoc', '~> 0.4.0', group: :doc
   gem 'uglifier', '>= 1.3.0'
 end

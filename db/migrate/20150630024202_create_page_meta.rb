@@ -8,6 +8,10 @@ class CreatePageMeta < ActiveRecord::Migration
       t.text :og_description
       t.text :introduction
       t.attachment :og_image
+      t.integer :discount_amount, default: 20
+      t.integer :bicycle_price, default: 290
+      t.integer :motorbike_price, default: 950
+      t.date :end_day, default: Time.zone.now + 1.month
     end
 
     PageMeta.create()

@@ -28,6 +28,10 @@ ActiveRecord::Schema.define(version: 20150630050012) do
     t.integer  "og_image_file_size"
     t.datetime "og_image_updated_at"
     t.text     "og_image_url"
+    t.integer  "discount_amount",       default: 20
+    t.integer  "bicycle_price",         default: 290
+    t.integer  "motorbike_price",       default: 950
+    t.date     "end_day",               default: '2015-07-30'
   end
 
   create_table "phone_orders", force: :cascade do |t|
