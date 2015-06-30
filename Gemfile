@@ -8,6 +8,7 @@ group :default do
   gem 'configliere'
   gem 'jbuilder', '~> 2.0'
   gem 'jquery-rails'
+  gem 'mainsms_api'
   gem 'paperclip'
   gem 'paperclip-elvfs'
   gem 'pg'
