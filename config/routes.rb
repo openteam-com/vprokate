@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   root to: 'main_page#index'
   resources :main_page, only: [:index]
+  resources :phone_orders
 
   namespace :manage do
     root to: 'page_meta#edit'

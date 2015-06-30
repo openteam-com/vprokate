@@ -1,0 +1,20 @@
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Заказ обратного звонка</h4>
+      </div>
+      <div class="modal-body">
+        <%= simple_form_for @phone_order, remote: true do |f| %>
+          <%= f.input :fullname, input_html: { class: 'input', placeholder: 'Имя' }, label: false %>
+          <%= f.input :phone, input_html: { class: 'input', placeholder: 'Телефон' }, label: false %>
+        </div>
+        <div class="modal-footer">
+          <%= f.submit 'ЗАКАЗАТЬ ЗВОНОК', class: 'btn btn-primary order-button'%>
+        <% end %>
+        <button type="button" class="btn btn-default" data-dismiss="modal">Закрыть</button>
+      </div>
+    </div>
+  </div>
+</div>

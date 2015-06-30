@@ -10,3 +10,5 @@ $ ->
     $.scrollTo $(selected).offset().top-50, 750
 
     false
+
+  init_modal_window()
