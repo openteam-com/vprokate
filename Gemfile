@@ -1,6 +1,7 @@
 source 'https://rubygems.org'
 
 group :default do
+  gem 'airbrake'
   gem 'bootstrap-sass', '~> 3.3.5'
   gem 'coffee-rails', '~> 4.1.0'
   gem 'compass-rails', github: "Compass/compass-rails", branch: "master"
