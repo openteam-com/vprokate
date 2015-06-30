@@ -3,7 +3,6 @@ class CreatePhoneOrders < ActiveRecord::Migration
     create_table :phone_orders do |t|
       t.string :fullname
       t.string :phone
-
       t.timestamps null: false
     end
   end
