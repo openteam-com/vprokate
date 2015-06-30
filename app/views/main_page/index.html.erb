@@ -20,16 +20,16 @@
   <div class="row">
     <!-- navigation -->
     <div class="col-sm-4 col-md-3 col-lg-3 hidden-xs left-block">
-      <ul class="nav nav-pills nav-stacked navigation">
+      <ul class="nav nav-pills nav-stacked navigation affix">
         <div class="info-banner center-block">
           <div class='banner-header'>VPROKATE.INFO</div>
           <div class='banner-content'>Прокат Велосипедов и мопедов в Севастополе</div>
         </div>
-        <li class='first'><%= link_to 'Цены', '#' %></li>
-        <li><%= link_to 'Пункты проката', '#' %></li>
-        <li><%= link_to 'Технические характеристики', '#' %></li>
-        <li><%= link_to 'Условия проката', '#' %></li>
-        <li><%= link_to 'Kонтакты', '#' %></li>
+        <li class='first'><%= link_to 'Цены', '#price', class: ['js-scroll'] %></li>
+        <li><%= link_to 'Пункты проката', '#rent', class: ['js-scroll'] %></li>
+        <li><%= link_to 'Технические характеристики', '#tech-details', class: ['js-scroll'] %></li>
+        <li><%= link_to 'Условия проката', '#conditions', class: ['js-scroll'] %></li>
+        <li><%= link_to 'Kонтакты', '#contacts', class: ['js-scroll'] %></li>
       </ul>
     </div>
     <!-- /navigation -->
@@ -40,12 +40,14 @@
         <div class="col-xs-12 cols-sm-12 col-md-6 col-lg-6">
           <div class="bicycle">
             <div class="center-block title">Велосипед TXED AF-17 26'</div>
+            <div class='hit-img-wrapper hidden-xs'> <%= image_tag 'hit-img.png' %> </div>
             <%= image_tag 'bicycle.jpg', class: "img-responsive" %>
           </div>
         </div>
         <div class="col-xs-12 cols-sm-12 col-md-6 col-lg-6">
           <div class="motorbike">
             <div class="center-block title">Мопед Racer Lupus 50</div>
+            <div class='hit-img-wrapper hidden-xs'> <%= image_tag 'hit-img.png' %> </div>
             <%= image_tag 'motorbike.jpg', class: "img-responsive" %>
           </div>
         </div>
@@ -53,7 +55,7 @@
       <! -- /images -->
 
       <!-- table -->
-      <div class="row">
+      <div class="row" id='price'>
         <h2 class="header">ЦЕНЫ</h2>
         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
           <div class="table-responsive">
@@ -93,8 +95,12 @@
         <div class="col-xs-11 col-xs-offset-1">
           <div class="row">
             <div class="order">
-              <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 left">
-                <div class="pull-right">
+              <div class="col-xs-12 col-sm-12 col-md-8 col-lg-6 left">
+                <div class="pull-right action">
+                  <div class="action-img-wrapper hidden-xs hidden-sm">
+                    <%= image_tag 'red-img.png' %>
+                    <span class='img-text'>20%<br />скидка</span>
+                  </div>
                   <p class="colored title">
                     Бесплатная доставка!
                   </p>
@@ -105,7 +111,7 @@
                 <div class="arrow-box">Акция <span class='hidden-xs'>до 1 июля!</span></div>
               </div>
 
-              <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 right">
+              <div class="col-xs-12 col-sm-12 col-md-0 col-lg-6 right">
                 <div class="pull-right">
                   <h3 class='hidden-xs hidden-sm hidden-md'>
                     ДО КОНЦА АКЦИИ ОСТАЛОСЬ
@@ -155,7 +161,7 @@
       <!-- /order -->
 
       <!-- map -->
-      <div class="row map-wrapper">
+      <div class="row map-wrapper" id='rent'>
         <h2 class="header">ПУНКТЫ ПРОКАТА</h2>
         <div class="col-xs-12 cols-sm-12 col-md-6 col-lg-6">
           <div class="map">
@@ -187,7 +193,7 @@
       <!-- /map -->
 
       <!-- tech-detail -->
-      <div class="row table-wrapper">
+      <div class="row table-wrapper" id='tech-details'>
         <h2 class="header">ТЕХНИЧЕСКИЕ ХАРАКТЕРИСТИКИ</h2>
         <div class="col-xs-12 cols-sm-12 col-md-6 col-lg-6">
           <div class="center-block title">Мопед Racer Lupus 50</div>
@@ -325,7 +331,7 @@
       <!-- /tech-detail  -->
 
       <!-- condition  -->
-      <div class="row condition-wrapper">
+      <div class="row condition-wrapper" id='conditions'>
         <h2 class="header">УСЛОВИЯ ПРОКАТА</h2>
         <div class=" col-lg-2 col-md-2 col-sm-6 col-xs-6">
           <%= image_tag 'feature1.png', class: "img-responsive center-block"%>
@@ -370,7 +376,7 @@
       <!-- /condition  -->
 
       <!-- contacts -->
-      <div class="row contacts-wrapper">
+      <div class="row contacts-wrapper" id='contacts'>
         <h2 class="header">Контакты</h2>
         <div class="contacts-content">
           <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">

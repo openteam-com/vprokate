@@ -33,7 +33,7 @@ nav
           color: #42679e
           font-weight: bold
           font-size: 20px
-          padding: 10px 0
+          padding: 10px 5px
 
           &:hover
             background-color: #f7f7f7
@@ -58,17 +58,23 @@ nav
 
     .image-wrapper, .table-wrapper
       .title
-        text-align: center
+        text-align: left
         background-color: #cad7e7
         color: #2a5893
         font-size: 21px
-        padding: 5px 0
+        padding: 5px 15px
 
     .image-wrapper
       margin: 50px -15px 20px
 
       .bicycle, .motorbike
         border: 2px solid #cad7e7
+        position: relative
+
+        .hit-img-wrapper
+          position: absolute
+          top: -32px
+          right: -17px
 
     .price-table, .tech-table
       color: #285994
@@ -94,6 +100,25 @@ nav
       .type-title
         color: $title_color
         font-size: 19px
+
+      .action
+        position: relative
+
+        .action-img-wrapper
+          position: absolute
+          top: -9px
+          left: -114px
+          z-index: 10
+
+          .img-text
+            position: absolute
+            text-align: center
+            top: 25%
+            left: 7%
+            font-size: 38px
+            font-weight: bold
+            line-height: 31px
+            color: #fff
 
       .old_price, .new_price
         float: left
@@ -126,7 +151,7 @@ nav
         font-size: 16px
 
       p.title
-        margin: 0
+        margin: 0 0 0 45px
 
         &:first-child
           margin-top: 10px
@@ -196,3 +221,6 @@ nav
 
     .about-wrapper
       margin-bottom: 40px
+
+.affix
+  max-width: 250px
