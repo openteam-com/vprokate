@@ -70,7 +70,7 @@ nav
         padding: 5px 15px
 
     .image-wrapper
-      margin: 50px -15px 20px
+      margin: 15px -15px 20px
 
       .bicycle, .motorbike
         border: 2px solid #cad7e7
@@ -99,6 +99,9 @@ nav
       &.no-mrg-top
         margin-top: 0
 
+      .button-price-wrapper
+        padding: 0
+
       .row-custom-margin
         margin: 40px 0 10px 5px
 
@@ -116,8 +119,8 @@ nav
           float: right
 
       .old_price
-        margin: 20px 0 0 18px
-        font-size: 35px
+        margin: 20px 0 0 10px
+        font-size: 32px
         position: relative
 
         &:after
@@ -131,7 +134,12 @@ nav
           width: 87%
 
       .new_price
-        font-size: 50px
+        font-size: 45px
+
+      .annotation
+        +clearfix
+        text-align: center
+        margin: 15px 0 0
 
       .title
         font-weight: bold
@@ -234,6 +242,9 @@ nav
         &.motorbike
           top: -70px
           left: -75px
+
+  .phone-for-mobile
+    text-align: center
 
 .affix
   max-width: 250px
