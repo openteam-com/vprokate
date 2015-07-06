@@ -11,7 +11,7 @@
           <tr>
             <td><%= order.fullname %></td>
             <td><%= order.phone %></td>
-            <td><%= time_ago_in_words(order.created_at) %></td>
+            <td><%= time_ago_in_words(order.created_at) %> назад</td>
           </tr>
         <% end %>
       </tbody>
