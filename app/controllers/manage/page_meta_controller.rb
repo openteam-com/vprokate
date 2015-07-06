@@ -13,6 +13,7 @@ class Manage::PageMetaController < Manage::ApplicationController
   private
   def meta_params
     params.require(:page_meta).permit(:title, :keywords, :description, :og_title, :og_description, :introduction,
-                                      :og_image, :discount_amount, :bicycle_price, :motorbike_price, :end_day)
+                                      :og_image, :bicycle_discount_amount, :motorbike_discount_amount, :bicycle_price,
+                                      :motorbike_price, :end_day)
   end
 end

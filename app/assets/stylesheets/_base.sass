@@ -107,25 +107,6 @@ nav
         font-size: 19px
         text-align: center
 
-      .action
-        position: relative
-
-        .action-img-wrapper
-          position: absolute
-          top: -9px
-          left: -98px
-          z-index: 10
-
-          .img-text
-            position: absolute
-            text-align: center
-            top: 44px
-            left: 21px
-            font-size: 33px
-            font-weight: bold
-            line-height: 31px
-            color: #fff
-
       .old_price, .new_price
         float: left
 
@@ -228,6 +209,31 @@ nav
 
     .about-wrapper
       margin-bottom: 40px
+
+    .action
+      position: relative
+
+      .action-img-wrapper
+        position: absolute
+        z-index: 10
+
+        .img-text
+          position: absolute
+          text-align: center
+          top: 44px
+          left: 21px
+          font-size: 30px
+          font-weight: bold
+          line-height: 31px
+          color: #fff
+
+        &.bicycle
+          top: -10px
+          left: -90px
+
+        &.motorbike
+          top: -70px
+          left: -75px
 
 .affix
   max-width: 250px

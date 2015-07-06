@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150630050012) do
+ActiveRecord::Schema.define(version: 20150706023957) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -28,10 +28,11 @@ ActiveRecord::Schema.define(version: 20150630050012) do
     t.integer  "og_image_file_size"
     t.datetime "og_image_updated_at"
     t.text     "og_image_url"
-    t.integer  "discount_amount",       default: 20
-    t.integer  "bicycle_price",         default: 290
-    t.integer  "motorbike_price",       default: 950
-    t.date     "end_day",               default: '2015-07-30'
+    t.integer  "bicycle_discount_amount",   default: 20
+    t.integer  "bicycle_price",             default: 290
+    t.integer  "motorbike_price",           default: 950
+    t.date     "end_day",                   default: '2015-07-30'
+    t.integer  "motorbike_discount_amount", default: 30
   end
 
   create_table "phone_orders", force: :cascade do |t|
