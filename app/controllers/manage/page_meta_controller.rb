@@ -1,6 +1,10 @@
 class Manage::PageMetaController < Manage::ApplicationController
+  def index
+    @page_metas = PageMeta.all
+  end
+
   def edit
-    @page_meta = PageMeta.find(1)
+    @page_meta = PageMeta.find(params[:id])
   end
 
   def update

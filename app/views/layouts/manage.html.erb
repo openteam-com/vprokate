@@ -11,8 +11,8 @@
   <div class="container manage_wrapper">
     <div class="col-lg-3">
       <ul class="nav nav-pills nav-stacked">
-        <%= content_tag :li, link_to('Мета описание', manage_root_path), class: action_name == 'edit' ? 'selected' : '' %>
-        <%= content_tag :li, link_to('Заказы звонков', manage_phone_orders_path), class: action_name == 'index' ? 'selected' : '' %>
+        <%= content_tag :li, link_to('Мета описание', manage_root_path), class: controller_name == 'page_meta' ? 'selected' : '' %>
+        <%= content_tag :li, link_to('Заказы звонков', manage_phone_orders_path), class: controller_name == 'phone_orders' ? 'selected' : '' %>
       </ul>
     </div>
     <div class="col-lg-9">
