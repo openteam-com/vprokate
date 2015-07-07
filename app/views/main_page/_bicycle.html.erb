@@ -1,185 +1,126 @@
-<!-- fixed top bar -->
-<nav class="navbar navbar-default navbar-fixed-top nav-justified">
-  <div class="container-fluid">
-    <div class="container">
-      <div class="navbar-header">
-        <a class="navbar-brand logo" href="#">
-          <%= image_tag "logo.png", :class =>"hidden-xs"%>
-          <%= image_tag "logo1.png", :class =>"hidden-sm hidden-md hidden-lg"%>
-        </a>
-        <p class="navbar-text city hidden-xs hidden-sm">г. Севастополь</p>
-        <%= link_to 'заказать сейчас', '#', :class => 'btn btn-default navbar-btn order-button hidden-sm hidden-md hidden-lg nav-button pull-right', data: { toggle: 'modal', target: '#myModal' } %>
-      </div>
-      <div class="collapse navbar-collapse">
-        <%= link_to 'заказать сейчас', '#', :class => 'btn btn-default navbar-btn navbar-right order-button', data: { toggle: 'modal', target: '#myModal' } %>
-        <p class='navbar-text navbar-right hidden-xs phone'>+7 (978) 05 09 333</p>
-      </div>
+<div class="col-xs-12 col-sm-8 col-md-9 col-lg-9 right-block">
+  <div class="row" >
+    <div class="col-xs-12 cols-sm-12 col-md-6 col-lg-6">
+      <h3 class='hidden-lg hidden-md hidden-sm center-block phone-for-mobile'>+7 (978) 05 09 333</h3>
     </div>
   </div>
-</nav>
+  <!-- images -->
+  <div class="row image-wrapper hidden-xs hidden-sm">
+    <div class="col-xs-12 cols-sm-12 col-md-6 col-lg-6">
+      <div class="bicycle">
+        <div class="center-block title">Велосипед TXED AF-17 26'</div>
+        <div class='hit-img-wrapper hidden-xs'> <%= image_tag 'hit-img.png' %> </div>
+        <%= image_tag 'bicycle.jpg', class: "img-responsive" %>
+      </div>
+    </div>
+    <!-- noindex -->
+    <div class="col-xs-12 cols-sm-12 col-md-6 col-lg-6">
+      <div class="motorbike">
+        <div class="center-block title">Мопед Racer Lupus 50</div>
+        <div class='hit-img-wrapper hidden-xs'> <%= image_tag 'hit-img.png' %> </div>
+        <%= image_tag 'motorbike.jpg', class: "img-responsive" %>
+      </div>
+    </div>
+    <!-- /noindex -->
+  </div>
+  <!-- /images -->
 
-<!-- content row -->
-<div class="container main-container">
+  <!-- order -->
   <div class="row">
-    <!-- navigation -->
-    <div class="col-sm-4 col-md-3 col-lg-3 hidden-xs left-block">
-      <ul class="nav nav-pills nav-stacked navigation affix">
-        <div class="info-banner center-block">
-          <div class='banner-header'>VPROKATE.INFO</div>
-          <div class='banner-content'>Прокат Велосипедов и мопедов в Севастополе</div>
-        </div>
-        <li class='first'><%= link_to 'Велосипеды', root_path %> / <%= link_to 'Мопеды', motorbike_path %></li>
-        <li><%= link_to 'Цены', '#price', class: ['js-scroll'] %></li>
-        <li><%= link_to 'Пункты проката', '#rent', class: ['js-scroll'] %></li>
-        <li><%= link_to 'Технические характеристики', '#tech-details', class: ['js-scroll'] %></li>
-        <li><%= link_to 'Условия проката', '#conditions', class: ['js-scroll'] %></li>
-        <li><%= link_to 'Kонтакты', '#contacts', class: ['js-scroll'] %></li>
-        <li><%= link_to 'Афиша Севастополя', 'http://sevastopol.znaigorod.ru/afisha', target: :_blank %></li>
-        <!-- noindex -->
-        <div class='share'>Поделиться</div>
-        <script type="text/javascript">(function() {
-          if (window.pluso)if (typeof window.pluso.start == "function") return;
-            if (window.ifpluso==undefined) { window.ifpluso = 1;
-              var d = document, s = d.createElement('script'), g = 'getElementsByTagName';
-              s.type = 'text/javascript'; s.charset='UTF-8'; s.async = true;
-              s.src = ('https:' == window.location.protocol ? 'https' : 'http')  + '://share.pluso.ru/pluso-like.js';
-              var h=d[g]('body')[0];
-              h.appendChild(s);
-        }})();</script>
-      <div class="pluso" data-background="transparent" data-options="medium,square,line,horizontal,nocounter,theme=04" data-services="vkontakte,odnoklassniki,facebook,twitter,yandex,google"></div>
-
-      <div id="vk_like"></div>
-      <script type="text/javascript">
-        VK.Widgets.Like("vk_like", {type: "button", height: 24});
-      </script>
-      <!-- /noindex -->
-    </ul>
-  </div>
-  <!-- /navigation -->
-
-  <div class="col-xs-12 col-sm-8 col-md-9 col-lg-9 right-block">
-    <div class="row" >
-      <div class="col-xs-12 cols-sm-12 col-md-6 col-lg-6">
-        <h3 class='hidden-lg hidden-md hidden-sm center-block phone-for-mobile'>+7 (978) 05 09 333</h3>
-      </div>
-    </div>
-    <!-- images -->
-    <div class="row image-wrapper hidden-xs hidden-sm">
-      <div class="col-xs-12 cols-sm-12 col-md-6 col-lg-6">
-        <div class="bicycle">
-          <div class="center-block title">Велосипед TXED AF-17 26'</div>
-          <div class='hit-img-wrapper hidden-xs'> <%= image_tag 'hit-img.png' %> </div>
-          <%= image_tag 'bicycle.jpg', class: "img-responsive" %>
-        </div>
-      </div>
-      <!-- noindex -->
-      <div class="col-xs-12 cols-sm-12 col-md-6 col-lg-6">
-        <div class="motorbike">
-          <div class="center-block title">Мопед Racer Lupus 50</div>
-          <div class='hit-img-wrapper hidden-xs'> <%= image_tag 'hit-img.png' %> </div>
-          <%= image_tag 'motorbike.jpg', class: "img-responsive" %>
-        </div>
-      </div>
-      <!-- /noindex -->
-    </div>
-    <!-- /images -->
-
-    <!-- order -->
-    <div class="row">
-      <div class="col-xs-12 col-lg-offset-1 col-lg-11 col-md-11 col-md-offset-1 col-sm-12">
-        <div class="order hidden-xs hidden-sm hidden-md">
-          <div class="row">
-            <div class="col-xs-12 col-sm-12 col-md-8 col-lg-6 left">
-              <div class="pull-right action need-padding">
-                <div class="action-img-wrapper bicycle">
-                  <%= image_tag 'red-img.png' %>
-                  <span class='img-text'><%= round_number(page_meta.bicycle_discount_amount) %>%<br />скидка</span>
-                </div>
-                <p class="colored title">
-                  Бесплатная доставка! *
-                </p>
-                <p class="colored title">
-                  Бесплатно в комплекте мотошлем, защитный трос и бак бензина!
-                </p>
+    <div class="col-xs-12 col-lg-offset-1 col-lg-11 col-md-11 col-md-offset-1 col-sm-12">
+      <div class="order hidden-xs hidden-sm hidden-md">
+        <div class="row">
+          <div class="col-xs-12 col-sm-12 col-md-8 col-lg-6 left">
+            <div class="pull-right action need-padding">
+              <div class="action-img-wrapper bicycle">
+                <%= image_tag 'red-img.png' %>
+                <span class='img-text'><%= round_number(page_meta.bicycle_discount_amount) %>%<br />скидка</span>
               </div>
-              <div class="arrow-box">Акция до <span><%= Russian::strftime(page_meta.end_day, "%d %B") %></span></div>
+              <p class="colored title">
+                Бесплатная доставка! *
+              </p>
+              <p class="colored title">
+                Бесплатно в комплекте мотошлем, защитный трос и бак бензина!
+              </p>
             </div>
+            <div class="arrow-box">Акция до <span><%= Russian::strftime(page_meta.end_day, "%d %B") %></span></div>
+          </div>
 
-            <div class="col-xs-12 col-sm-12 col-md-0 col-lg-6 right">
-              <div class="pull-right js-timer-info" data-date="<%= page_meta.end_day %>" >
-                <h3>
-                  ДО КОНЦА АКЦИИ ОСТАЛОСЬ
-                </h3>
-                <div class="js-countdown"></div>
-              </div>
+          <div class="col-xs-12 col-sm-12 col-md-0 col-lg-6 right">
+            <div class="pull-right js-timer-info" data-date="<%= page_meta.end_day %>" >
+              <h3>
+                ДО КОНЦА АКЦИИ ОСТАЛОСЬ
+              </h3>
+              <div class="js-countdown"></div>
             </div>
           </div>
         </div>
-        <div class="order no-mrg-top">
-          <div class="row row-custom-margin">
-            <div class="col-xs-12 col-sm-12 col-md-3 col-lg-4">
-              <%= image_tag 'bicycle.jpg',class: "img-responsive" %>
-            </div>
-            <div class="col-xs-12 col-sm-12 col-md-9 col-lg-8">
-              <div class="row">
-                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-                  <div class='type-title'>Велосипед TXED AF-17 26'</div>
-                </div>
-                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-                  <%= link_to 'Заказать сейчас', '#', class: [:btn, 'btn-default', 'order-button', :large, 'center-block'], data: { toggle: 'modal', target: '#myModal' } %>
-                </div>
+      </div>
+      <div class="order no-mrg-top">
+        <div class="row row-custom-margin">
+          <div class="col-xs-12 col-sm-12 col-md-3 col-lg-4">
+            <%= image_tag 'bicycle.jpg',class: "img-responsive" %>
+          </div>
+          <div class="col-xs-12 col-sm-12 col-md-9 col-lg-8">
+            <div class="row">
+              <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                <div class='type-title'>Велосипед TXED AF-17 26'</div>
               </div>
-              <div class="row">
-                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                  <div class='new_price'><%= discount_price('bicycle') %>
-                    <div class='upper'>руб</div>
-                  </div>
-                  <div class='old_price'><%= page_meta.bicycle_price %>
-                    <div class='upper'>руб</div>
-                  </div>
-                  <div class="annotation">Цена за сутки</div>
-                </div>
+              <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                <%= link_to 'Заказать сейчас', '#', class: [:btn, 'btn-default', 'order-button', :large, 'center-block'], data: { toggle: 'modal', target: '#myModal' } %>
               </div>
             </div>
+            <div class="row">
+              <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <div class='new_price'><%= discount_price('bicycle') %>
+                <div class='upper'>руб</div>
+              </div>
+              <div class='old_price'><%= page_meta.bicycle_price %>
+              <div class='upper'>руб</div>
+            </div>
+            <div class="annotation">Цена за сутки</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+      <div style='border: 1px solid #fff;'></div>
+    </div>
+  </div>
+  <!-- noindex -->
+  <div class="order no-mrg-top">
+    <div class="row row-custom-margin action">
+      <div class="action-img-wrapper motorbike hidden-xs hidden-sm hidden-md">
+        <%= image_tag 'red-img.png' %>
+        <span class='img-text'><%= round_number(page_meta.motorbike_discount_amount) %>%<br />скидка</span>
+      </div>
+      <div class="col-xs-12 col-sm-12 col-md-3 col-lg-4">
+        <%= image_tag 'motorbike.jpg', class: "img-responsive" %>
+      </div>
+      <div class="col-xs-12 col-sm-12 col-md-9 col-lg-8">
+        <div class="row">
+          <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+            <div class='type-title'>Мопед Racer Lupus 50</div>
+          </div>
+          <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+            <%= link_to 'Заказать сейчас', '#', class: [:btn, 'btn-default', 'order-button', :large, 'center-block'], data: { toggle: 'modal', target: '#myModal' } %>
           </div>
         </div>
         <div class="row">
           <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-            <div style='border: 1px solid #fff;'></div>
+            <div class='new_price'><%= discount_price('motorbike') %>
+            <div class='upper'>руб</div>
           </div>
+          <div class='old_price'><%= page_meta.motorbike_price %>
+          <div class='upper'>руб</div>
         </div>
-        <!-- noindex -->
-        <div class="order no-mrg-top">
-          <div class="row row-custom-margin action">
-            <div class="action-img-wrapper motorbike hidden-xs hidden-sm hidden-md">
-              <%= image_tag 'red-img.png' %>
-              <span class='img-text'><%= round_number(page_meta.motorbike_discount_amount) %>%<br />скидка</span>
-            </div>
-            <div class="col-xs-12 col-sm-12 col-md-3 col-lg-4">
-              <%= image_tag 'motorbike.jpg', class: "img-responsive" %>
-            </div>
-            <div class="col-xs-12 col-sm-12 col-md-9 col-lg-8">
-              <div class="row">
-                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-                  <div class='type-title'>Мопед Racer Lupus 50</div>
-                </div>
-                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-                  <%= link_to 'Заказать сейчас', '#', class: [:btn, 'btn-default', 'order-button', :large, 'center-block'], data: { toggle: 'modal', target: '#myModal' } %>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                  <div class='new_price'><%= discount_price('motorbike') %>
-                    <div class='upper'>руб</div>
-                  </div>
-                  <div class='old_price'><%= page_meta.motorbike_price %>
-                    <div class='upper'>руб</div>
-                  </div>
-                  <div class="annotation">Цена за сутки</div>
-                </div>
-              </div>
-            </div>
-          </div>
+        <div class="annotation">Цена за сутки</div>
+      </div>
+    </div>
+  </div>
+</div>
         </div>
         <!-- /noindex -->
       </div>
@@ -471,18 +412,4 @@
     <!-- /VKwidget -->
   </div>
 </div>
-</div>
-<nav class="navbar-default nav-justified">
-  <div class="container-fluid">
-    <div class="container">
-      <div class="navbar-header">
-        <%= render :partial => 'commons/counters' %>
-      </div>
-      <div class="collapse navbar-collapse">
-        <%= link_to 'заказать сейчас', '#', :class => 'btn btn-default navbar-btn navbar-right order-button', data: { toggle: 'modal', target: '#myModal' } %>
-        <p class='navbar-text navbar-right hidden-xs phone'>+7 (978) 05 09 333</p>
-      </div>
-    </div>
-  </div>
-</nav>
 <%= render :partial => 'commons/modal_window' %>

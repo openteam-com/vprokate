@@ -2,7 +2,6 @@
 <div class="navbar-text city hidden-xs hidden-sm">
   <% if Rails.env.production? %>
     <!-- begin of Top100 code -->
-
     <script id="top100Counter" type="text/javascript" src="http://counter.rambler.ru/top100.jcn?3118803"></script>
     <noscript>
       <a href="http://top100.rambler.ru/navi/3118803/">
@@ -14,23 +13,27 @@
     <!-- Rating@Mail.ru counter -->
     <script type="text/javascript">
       var _tmr = _tmr || [];
-_tmr.push({id: "2670056", type: "pageView", start: (new Date()).getTime()});
-(function (d, w, id) {
-  if (d.getElementById(id)) return;
-    var ts = d.createElement("script"); ts.type = "text/javascript"; ts.async = true; ts.id = id;
-  ts.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//top-fwz1.mail.ru/js/code.js";
-  var f = function () {var s = d.getElementsByTagName("script")[0]; s.parentNode.insertBefore(ts, s);};
-  if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); }
-})(document, window, "topmailru-code");
-    </script><noscript><div style="position:absolute;left:-10000px;">
-    <img src="//top-fwz1.mail.ru/counter?id=2670056;js=na" style="border:0;" height="1" width="1" alt="Рейтинг@Mail.ru" />
-</div></noscript>
-<!-- //Rating@Mail.ru counter -->
-<img src="//top-fwz1.mail.ru/counter?id=2670056;t=502;l=1" style="border:0;" height="31" width="88" alt="Рейтинг@Mail.ru" />
+      _tmr.push({id: "2670056", type: "pageView", start: (new Date()).getTime()});
+      (function (d, w, id) {
+        if (d.getElementById(id)) return;
+        var ts = d.createElement("script"); ts.type = "text/javascript"; ts.async = true; ts.id = id;
+        ts.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//top-fwz1.mail.ru/js/code.js";
+        var f = function () {var s = d.getElementsByTagName("script")[0]; s.parentNode.insertBefore(ts, s);};
+        if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); }
+      })(document, window, "topmailru-code");
+    </script>
+    <noscript>
+      <div style="position:absolute;left:-10000px;">
+        <img src="//top-fwz1.mail.ru/counter?id=2670056;js=na" style="border:0;" height="1" width="1" alt="Рейтинг@Mail.ru" />
+      </div>
+    </noscript>
+    <img src="//top-fwz1.mail.ru/counter?id=2670056;t=502;l=1" style="border:0;" height="31" width="88" alt="Рейтинг@Mail.ru" />
+    <!-- //Rating@Mail.ru counter -->
 
-<!--LiveInternet counter-->
-<script type="text/javascript"><!--
-  document.write("<a href='//www.liveinternet.ru/click' "+
+    <!--LiveInternet counter-->
+    <script type="text/javascript">
+      <!--
+      document.write("<a href='//www.liveinternet.ru/click' "+
             "target=_blank><img src='//counter.yadro.ru/hit?t14.6;r"+
             escape(document.referrer)+((typeof(screen)=="undefined")?"":
               ";s"+screen.width+"*"+screen.height+"*"+(screen.colorDepth?
@@ -39,7 +42,8 @@ _tmr.push({id: "2670056", type: "pageView", start: (new Date()).getTime()});
             "' alt='' title='LiveInternet: показано число просмотров за 24"+
             " часа, посетителей за 24 часа и за сегодня' "+
             "border='0' width='88' height='31'><\/a>")
-//--></script>
+            //-->
+    </script>
   <!--/LiveInternet-->
 
   <!-- HotLog -->
@@ -89,9 +93,13 @@ _tmr.push({id: "2670056", type: "pageView", start: (new Date()).getTime()});
       } else { f(); }
     })(document, window, "yandex_metrika_callbacks");
   </script>
-  <noscript><div><img src="//mc.yandex.ru/watch/31299988" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+  <noscript>
+    <div>
+      <img src="//mc.yandex.ru/watch/31299988" style="position:absolute; left:-9999px;" alt="" />
+    </div>
+  </noscript>
   <!-- /Yandex.Metrika counter -->
 
-<% end %>
+  <% end %>
 </div>
 <!-- /noindex -->
