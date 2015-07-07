@@ -35,6 +35,9 @@ nav
         &.first
           border-top: 1px solid #cad7e7
 
+          a
+            +inline-block
+
         a
           color: #42679e
           font-weight: bold
@@ -221,7 +224,9 @@ nav
 
     .action
       position: relative
-      padding-left: 30px
+
+      &.need-padding
+        padding-left: 30px
 
       .action-img-wrapper
         position: absolute
