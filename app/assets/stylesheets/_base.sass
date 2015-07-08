@@ -23,12 +23,12 @@ nav
 
     .share
       border-top: 1px solid #cad7e7
-      padding: 10px 0 0 5px
-      font-size: 20px
+      padding: 5px 0 0 5px
+      font-size: 18px
       margin-bottom: 5px
 
     .navigation
-      margin-top: 15px
+      margin-top: 10px
       width: 228px
 
       li
@@ -42,18 +42,25 @@ nav
           color: #42679e
           font-weight: bold
           font-size: 15px
-          padding: 10px 5px
+          padding: 5px 5px
 
           &:hover
             background-color: #f7f7f7
 
       .info-banner
         background-color: #f7f7f7
-        padding: 10px
-        margin-bottom: 15px
+        padding: 10px 10px 0
+        margin-bottom: 10px
+        +clearfix
 
         .banner-header
-          font-size: 18px
+          font-size: 15px
+          float: left
+          color: #ed3f40
+
+        .banner-image
+          float: left
+          margin-right: 10px
 
   .right-block
     border-right: 1px solid #cad7e7
