@@ -31,7 +31,7 @@ ActiveRecord::Schema.define(version: 20150917155855) do
     t.integer  "bicycle_discount_amount",   default: 20
     t.integer  "bicycle_price",             default: 290
     t.integer  "motorbike_price",           default: 950
-    t.date     "end_day",                   default: '2015-10-17'
+    t.date     "end_day",                   default: '2015-07-30'
     t.integer  "motorbike_discount_amount", default: 30
     t.string   "slug"
   end
