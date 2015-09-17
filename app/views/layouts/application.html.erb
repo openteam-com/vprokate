@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title><%= page_meta.title %></title>
-    <meta name='keywords' content='<%= page_meta.keywords %>' />
-    <meta name='description' content='<%= page_meta.description %>' />
-    <meta property="og:title" content='<%= page_meta.og_title %>' />
-    <meta property="og:description" content='<%= page_meta.og_description %>' />
-    <meta property="og:image" content='<%= page_meta.og_image_url %>' />
+    <title><%= page_meta.title rescue 'Прокат в Севастополе' %></title>
+    <meta name='keywords' content='<%= page_meta.keywords rescue 'прокат, прокат в Севастополе, Севастополь'%>' />
+    <meta name='description' content='<%= page_meta.description rescue 'прокат велосипедов, мопедов, мотоциклов и автомобилей в Севастополе'%>' />
+    <meta property="og:title" content='<%= page_meta.og_title rescue 'Прокат в Севастополе'%>' />
+    <meta property="og:description" content='<%= page_meta.og_description rescue 'прокат велосипедов, мопедов, мотоциклов и автомобилей в Севастополе'%>' />
+    <meta property="og:image" content='<%= page_meta.og_image_url rescue nil %>' />
     <link rel='canonical' href='<%= request.url.split('?').first %>' />
     <%= favicon_link_tag %>
     <%= stylesheet_link_tag    'application', media: 'all' %>
