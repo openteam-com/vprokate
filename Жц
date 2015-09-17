@@ -9,7 +9,6 @@
     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
       <h1>Прокат мопедов в Севастополе</h1>
     </div>
-  </div>
     <div class="row image-wrapper hidden-xs hidden-sm">
       <!-- noindex -->
       <div class="col-xs-12 cols-sm-12 col-md-6 col-lg-6">
@@ -176,29 +175,15 @@
       <h2 class="header">ПУНКТЫ ПРОКАТА</h2>
       <div class="col-xs-12 cols-sm-12 col-md-6 col-lg-6">
         <div class="map">
-          <span class="title">
-            <p>Парк Победы (на кольце)</p>
-            <p>Только по выходным с 12:00 до 19:00</p>
-          </span>
+          <span class="title">Парк Победы(на кольце)</span>
+          <span class="hint">Только по выходным с 12:00 до 19:00</span>
           <%= image_tag 'map1.jpg',class: "img-responsive" %>
         </div>
       </div>
       <div class="col-xs-12 cols-sm-12 col-md-6 col-lg-6">
         <div class="map">
-          <span class="title">
-            <p>ул. Одесская, 11</p>
-            <p>По предварительным звонкам</p>
-          </span>
+          <span class="title">Комсольский парк</span>
           <%= image_tag 'map2.jpg',class: "img-responsive" %>
-        </div>
-      </div>
-      <div class="col-xs-12">
-        <div class="map big-map">
-          <span class="title">
-            <p>ул. Меньшикова, 1а</p>
-            <p>с 9:00 до 21:00</p>
-          </span>
-          <%= image_tag 'map3.jpg',class: "img-responsive" %>
         </div>
       </div>
     </div>

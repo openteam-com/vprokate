@@ -12,7 +12,7 @@ group :default do
   gem 'paperclip'
   gem 'paperclip-elvfs'
   gem 'pg'
-  gem 'rails', '4.2.1'
+  gem 'rails', '4.2.4'
   gem 'russian'
   gem 'sass-rails', '>= 3.2'
   gem 'sdoc', '~> 0.4.0', group: :doc
