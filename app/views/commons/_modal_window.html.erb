@@ -9,6 +9,7 @@
         <%= simple_form_for @phone_order, remote: true do |f| %>
           <%= f.input :fullname, input_html: { class: 'input', placeholder: 'Имя' }, label: false %>
           <%= f.input :phone, input_html: { class: 'input', placeholder: 'Телефон' }, label: false %>
+          <%= f.input :vehicle, label: false, include_blank: false %>
         </div>
         <div class="modal-footer">
           <%= f.submit 'ЗАКАЗАТЬ ЗВОНОК', class: 'btn btn-primary order-button'%>

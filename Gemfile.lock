@@ -156,6 +156,8 @@ GEM
     curb (0.8.8)
     debug_inspector (0.0.2)
     dotenv (2.0.2)
+    enumerize (1.0.0)
+      activesupport (>= 3.2)
     erubis (2.7.0)
     execjs (2.6.0)
     ffi (1.9.10)
@@ -323,6 +325,7 @@ DEPENDENCIES
   coffee-rails (~> 4.1.0)
   compass-rails!
   configliere
+  enumerize
   jbuilder (~> 2.0)
   jquery-rails
   mainsms_api

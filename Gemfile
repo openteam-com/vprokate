@@ -6,6 +6,7 @@ group :default do
   gem 'coffee-rails', '~> 4.1.0'
   gem 'compass-rails', github: "Compass/compass-rails", branch: "master"
   gem 'configliere'
+  gem 'enumerize'
   gem 'jbuilder', '~> 2.0'
   gem 'jquery-rails'
   gem 'mainsms_api'

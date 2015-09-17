@@ -2,3 +2,12 @@ ru:
   page_meta:
     bicycle: Мета для велосипедов
     motorbike: Мета для мопедов
+  enumerize:
+    vehicle:
+      bicycle: Велосипед
+      motorbike: Мопед/Скутер
+      bike: Мотоцикл
+      car: Автомобиль
+
+
+
