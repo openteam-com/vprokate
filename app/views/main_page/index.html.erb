@@ -16,7 +16,7 @@
       </div>
     </div>
   </div>
-  <div class="container-fluid second">
+  <div class="container-fluid second-fluid hidden-xs">
     <div class="container">
       <div class="col-lg-3 first col-sm-4 col-md-3 col-xs-12">
         <%= link_to root_path do image_tag "menu_icons/velik.png" end %>
@@ -33,6 +33,23 @@
     </div>
   </div>
 </nav>
+
+<div class="container-fluid second-fluid visible-xs">
+  <div class="container">
+    <div class="col-lg-3 first col-sm-4 col-md-3 col-xs-12">
+      <%= link_to root_path do image_tag "menu_icons/velik.png" end %>
+    </div>
+    <div class="col-lg-3 second col-sm-4 col-md-3 col-xs-12">
+      <%= link_to motorbike_path do image_tag "menu_icons/skuter.png" end %>
+    </div>
+    <div class="col-lg-3 third col-sm-4 col-md-3 col-xs-12">
+      <%= link_to motocykli_path do image_tag "menu_icons/mototsikl.png" end %>
+    </div>
+    <div class="col-lg-3 fourth col-sm-4 col-md-3 col-xs-12">
+      <%= link_to avto_mashini_path do image_tag "menu_icons/avto.png" end %>
+    </div>
+  </div>
+</div>
 
 <!-- content row -->
 <div class="container main-container">

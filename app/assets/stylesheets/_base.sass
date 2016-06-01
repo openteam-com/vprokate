@@ -8,16 +8,6 @@ nav
   .container-fluid
     background-color: #597297
 
-    &.second
-      background-color: #cad6e8
-      padding: 10px 0
-
-      .first
-        padding-top: 3px
-
-      .fourth
-        padding-top: 15px
-
     .logo
       height: 60px
       padding: 10px 10px
@@ -26,8 +16,24 @@ nav
       font-size: 21px
       color: white
 
+.second-fluid
+  background-color: #cad6e8 !important
+  padding: 10px 0
+
+  @media (max-width: $screen-xs-max)
+    margin-top: 60px
+
+  .first
+    padding-top: 3px
+
+  .fourth
+    padding-top: 15px
+
 .main-container
   margin-top: 135px
+
+  @media (max-width: $screen-xs-max)
+    margin-top: 20px
 
   .left-block
     .share
