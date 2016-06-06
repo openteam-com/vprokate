@@ -12,7 +12,7 @@ $ ->
 
   $(".js-scroll").click ->
     selected = $(this).attr("href")
-    $.scrollTo $(selected).offset().top-50, 750
+    $.scrollTo $(selected).offset().top-120, 750
 
     false
 
