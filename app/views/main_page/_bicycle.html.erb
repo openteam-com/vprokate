@@ -69,7 +69,7 @@
           <div class="col-xs-12 col-sm-12 col-md-9 col-lg-8">
             <div class="row">
               <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-                <div class='type-title'>Велосипед TXED AF-17 26'</div>
+                <div class='type-title'>Велосипед</div>
               </div>
               <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
                 <%= link_to 'Заказать сейчас', '#', class: [:btn, 'btn-default', 'order-button', :large, 'center-block'], data: { toggle: 'modal', target: '#myModal' } %>
@@ -107,7 +107,7 @@
       <div class="col-xs-12 col-sm-12 col-md-9 col-lg-8">
         <div class="row">
           <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-            <div class='type-title'>Мопед Racer Lupus 50</div>
+            <div class='type-title'>Мопед</div>
           </div>
           <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
             <%= link_to 'Заказать сейчас', '#', class: [:btn, 'btn-default', 'order-button', :large, 'center-block'], data: { toggle: 'modal', target: '#myModal' } %>
@@ -302,7 +302,11 @@
     <div class="row about-wrapper">
       <h2 class="header">О нас</h2>
       <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-        <%= page_meta.introduction %>
+        <% page_meta.introduction.split(/\r\n/).each do |part| %>
+          <p>
+            <%= part %>
+          </p>
+        <% end %>
       </div>
     </div>
     <!-- /about -->

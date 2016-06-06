@@ -2,12 +2,10 @@ ru:
   page_meta:
     bicycle: Мета для велосипедов
     motorbike: Мета для мопедов
+    kuplu_moped_velosiped: Мета для страницы "kuplu_moped_velosiped"
   enumerize:
     vehicle:
       bicycle: Велосипед
       motorbike: Мопед/Скутер
       bike: Мотоцикл
       car: Автомобиль
-
-
-
