@@ -5,6 +5,7 @@
         <th>ФИО</th>
         <th>Телефон</th>
         <th>Дата заказа</th>
+        <th>Тип заказа</th>
       </thead>
       <tbody>
         <% @phone_orders.each do |order| %>
@@ -12,9 +13,11 @@
             <td><%= order.fullname %></td>
             <td><%= order.phone %></td>
             <td><%= time_ago_in_words(order.created_at) %> назад</td>
+            <td><%= t %Q(enumerize.vehicle.#{order.vehicle}) %></td>
           </tr>
         <% end %>
       </tbody>
     </table>
+    <%= paginate @phone_orders %>
   </div>
 </div>

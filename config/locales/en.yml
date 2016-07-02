@@ -1,0 +1,13 @@
+en:
+  page_meta:
+    bicycle:
+    motorbike:
+    kuplu_moped_velosiped:
+    motocykli:
+
+  enumerize:
+    vehicle:
+      bicycle:
+      motorbike:
+      bike:
+      car:

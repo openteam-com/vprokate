@@ -1,0 +1,18 @@
+en:
+  helpers:
+    page_entries_info:
+      more_pages:
+        display_entries:
+      one_page:
+        display_entries:
+          few:
+          many:
+          one:
+          other:
+  views:
+    pagination:
+      first:
+      last:
+      next:
+      previous:
+      truncate:

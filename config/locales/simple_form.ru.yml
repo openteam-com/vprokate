@@ -1,0 +1,16 @@
+ru:
+  simple_form:
+    labels:
+      page_meta:
+        title: "Заголовок"
+        keywords: "Мета - keywords"
+        description: "Мета - описание"
+        og_title: "OG - заголовок"
+        og_description: "OG - описание"
+        og_image: "OG - изображение"
+        introduction: "SEO - текст"
+        bicycle_discount_amount: "Размер скидки на велосипеды"
+        motorbike_discount_amount: "Размер скидки на мопеды"
+        bicycle_price: "Цена велосипеда(без скидки)"
+        motorbike_price: "Цена мопеда(без скидки)"
+        end_day: "Дата завершения акции"

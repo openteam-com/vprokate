@@ -9,6 +9,7 @@ group :default do
   gem 'enumerize'
   gem 'jbuilder', '~> 2.0'
   gem 'jquery-rails'
+  gem 'kaminari'
   gem 'mainsms_api'
   gem 'nested_form'
   gem 'paperclip'
