@@ -8,9 +8,18 @@
     <meta property="og:description" content='<%= page_meta.og_description rescue 'прокат велосипедов, мопедов, мотоциклов и автомобилей в Севастополе'%>' />
     <meta property="og:image" content='<%= page_meta.og_image_url rescue nil %>' />
     <link rel='canonical' href='<%= request.url.split('?').first %>' />
+
     <%= favicon_link_tag %>
     <%= stylesheet_link_tag    'application', media: 'all' %>
     <%= javascript_include_tag 'application' %>
+
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//blueimp.github.io/Gallery/css/blueimp-gallery.min.css">
+    <link rel="stylesheet" href="css/bootstrap-image-gallery.min.css">
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="//blueimp.github.io/Gallery/js/jquery.blueimp-gallery.min.js"></script>
+    <script src="js/bootstrap-image-gallery.min.js"></script>
+
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <%= csrf_meta_tags %>
     <script type="text/javascript" src="//vk.com/js/api/openapi.js?116"></script>

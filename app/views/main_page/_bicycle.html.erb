@@ -250,8 +250,11 @@
     </div>
     <!-- /condition  -->
 
-    <!-- future gallery -->
-    <!-- /future gallery  -->
+    <!-- gallery -->
+    <% if page_meta.items.present? %>
+      <%= render partial: 'commons/gallery' %>
+    <% end %>
+    <!-- gallery  -->
 
     <!-- contacts -->
     <div class='row contacts-wrapper' id='contacts'>
