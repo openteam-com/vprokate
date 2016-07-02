@@ -14,3 +14,9 @@ ru:
         bicycle_price: "Цена велосипеда(без скидки)"
         motorbike_price: "Цена мопеда(без скидки)"
         end_day: "Дата завершения акции"
+      gallery:
+        title: Название
+        page_meta: Страница отображения
+      gallery_items:
+        title: Заголовок
+        image: Изображение

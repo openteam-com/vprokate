@@ -13,6 +13,7 @@
         <ul class="nav nav-pills nav-stacked">
           <%= content_tag :li, link_to('Мета описание', manage_root_path), class: controller_name == 'page_meta' ? 'selected' : '' %>
           <%= content_tag :li, link_to('Заказы звонков', manage_phone_orders_path), class: controller_name == 'phone_orders' ? 'selected' : '' %>
+          <%= content_tag :li, link_to('Галереи', manage_galleries_path), class: controller_name == 'galleries' ? 'selected' : '' %>
         </ul>
       </div>
       <div class="col-lg-9">

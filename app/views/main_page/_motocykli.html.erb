@@ -251,11 +251,11 @@
     <!-- /condition  -->
 
     <!-- gallery -->
-    <% if page_meta.items.present? %>
-    <div class='row contacts-wrapper' id='gallery'>
-      <h2 class='header'>Фотогалерея</h2>
-      <%= render partial: 'commons/gallery' %>
-    </div>
+    <% if page_meta.gallery.gallery_items.present? %>
+      <div class='row contacts-wrapper' id='gallery'>
+        <h2 class='header'>Фотогалерея</h2>
+        <%= render partial: 'commons/gallery' %>
+      </div>
     <% end %>
     <!-- gallery  -->
 

@@ -1,0 +1,17 @@
+<div class="row">
+  <div class="col-lg-12">
+    <%= link_to 'Добавить', new_manage_gallery_path, class: "btn btn-primary pull-right" %>
+    <table class="table table-bordered table-hover table-condensed">
+      <thead>
+        <th>Название</th>
+      </thead>
+      <tbody>
+        <% @galleries.each do |gallery| %>
+          <tr>
+            <td><%= link_to gallery.title, edit_manage_gallery_path(gallery) %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+</div>

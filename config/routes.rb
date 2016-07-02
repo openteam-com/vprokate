@@ -11,5 +11,6 @@ Rails.application.routes.draw do
 
     resources :page_meta, only: [:update, :edit]
     resources :phone_orders, only: [:index]
+    resources :galleries
   end
 end

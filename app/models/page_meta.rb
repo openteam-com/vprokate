@@ -29,4 +29,10 @@ class PageMeta < ActiveRecord::Base
 
   has_many :items, dependent: :destroy
   accepts_nested_attributes_for :items, allow_destroy: true
+
+  has_one :gallery, dependent: :destroy
+
+  def localized_slug
+    I18n.t %Q(page_meta.#{slug})
+  end
 end

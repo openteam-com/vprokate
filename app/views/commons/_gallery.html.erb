@@ -1,5 +1,5 @@
-<div id="links">
-  <% page_meta.items.each do |item| %>
+<div id="links" class="col-xs-12">
+  <% page_meta.gallery.gallery_items.each do |item| %>
     <%= link_to item.image_url, title: item.title, data: {gallery: ''} do %>
       <%= image_tag resize_image(url: item.image_url), alt: item.title %>
     <% end %>
