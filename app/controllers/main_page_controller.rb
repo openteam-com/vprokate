@@ -6,6 +6,7 @@ class MainPageController < ApplicationController
   end
 
   private
+
   def prefix
     params[:prefix]
   end
@@ -20,6 +21,6 @@ class MainPageController < ApplicationController
   end
 
   def round_number(number)
-    number.to_i/10*10
+    number.to_i / 10 * 10
   end
 end

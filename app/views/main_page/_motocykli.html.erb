@@ -1,15 +1,303 @@
-<div class="col-xs-12 col-sm-8 col-md-9 col-lg-9 right-block">
-  <div class="row" >
-    <div class="col-xs-12 cols-sm-12 col-md-6 col-lg-6">
+<div class='col-xs-12 col-sm-8 col-md-9 col-lg-9 right-block'>
+  <div class='row' >
+    <div class='col-xs-12 cols-sm-12 col-md-6 col-lg-6'>
       <h3 class='hidden-lg hidden-md hidden-sm center-block phone-for-mobile'>+7 (978) 05 09 333</h3>
     </div>
   </div>
   <!-- images -->
-  <div class="row">
-    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+  <div class='row'>
+    <div class='col-xs-12 col-sm-12 col-md-12 col-lg-12'>
       <h1>Прокат мотоциклов в Севастополе. Мотопрокат</h1>
-      <h2>Контент находится в стадии формирования, звоните +7-978-050-9333</h2>
     </div>
+  </div>
+
+  <% if page_meta.items.present? %>
+    <div class='row image-wrapper hidden-xs hidden-sm'>
+      <% page_meta.items.each do |item| %>
+        <div class='col-xs-12 cols-sm-12 col-md-6 col-lg-6'>
+          <div class='bicycle'>
+            <div class='center-block title'><%= item.title %></div>
+            <div class='hit-img-wrapper hidden-xs'> <%= image_tag 'hit-img.png' %> </div>
+            <%= image_tag item.image_url, class: 'img-responsive' %>
+
+            <div class='ttc'>
+              <div class='table-responsive'>
+                <table class='table table-bordered'>
+                  <% item.description.split(/\r\n/).each do |row| %>
+                    <tr>
+                      <% row.split('|').each do |block| %>
+                        <td><%= block.squish %></td>
+                      <% end %>
+                    </tr>
+                  <% end %>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  <% end %>
+  <!-- /images -->
+
+  <!-- order -->
+  <div class='row'>
+    <div class='col-xs-12 col-lg-offset-1 col-lg-11 col-md-11 col-md-offset-1 col-sm-12'>
+      <div class='order hidden-xs hidden-sm hidden-md'>
+        <div class='row'>
+          <div class='col-xs-12 col-sm-12 col-md-8 col-lg-6 left'>
+            <div class='pull-right action need-padding'>
+              <div class='action-img-wrapper bicycle'>
+                <%= image_tag 'red-img.png' %>
+                <span class='img-text'><%= round_number(page_meta.bicycle_discount_amount) %>%<br />скидка</span>
+              </div>
+              <p class='colored title'>
+                Бесплатная доставка! *
+              </p>
+              <p class='colored title'>
+                Бесплатно в комплекте мотошлем, защитный трос и бак бензина!
+              </p>
+            </div>
+            <div class='arrow-box'>Акция до <span><%= Russian::strftime(page_meta.end_day, '%d %B') %></span></div>
+          </div>
+
+          <div class='col-xs-12 col-sm-12 col-md-0 col-lg-6 right'>
+            <div class='pull-right js-timer-info' data-date='<%= page_meta.end_day %>' >
+              <h3>
+                ДО КОНЦА АКЦИИ ОСТАЛОСЬ
+              </h3>
+              <div class='js-countdown'></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class='order no-mrg-top'>
+        <div class='row row-custom-margin'>
+          <div class='col-xs-12 col-sm-12 col-md-3 col-lg-4'>
+            <%= image_tag 'bicycle.jpg',class: 'img-responsive' %>
+          </div>
+          <div class='col-xs-12 col-sm-12 col-md-9 col-lg-8'>
+            <div class='row'>
+              <div class='col-xs-12 col-sm-12 col-md-6 col-lg-6'>
+                <div class='type-title'>Велосипед</div>
+              </div>
+              <div class='col-xs-12 col-sm-12 col-md-6 col-lg-6'>
+                <%= link_to 'Заказать сейчас', '#', class: [:btn, 'btn-default', 'order-button', :large, 'center-block'], data: { toggle: 'modal', target: '#myModal' } %>
+              </div>
+            </div>
+            <div class='row'>
+              <div class='col-xs-12 col-sm-12 col-md-12 col-lg-12'>
+                <div class='new_price'><%= discount_price('bicycle') %>
+                <div class='upper'>руб</div>
+              </div>
+              <div class='old_price'><%= page_meta.bicycle_price %>
+              <div class='upper'>руб</div>
+            </div>
+            <div class='annotation'>Цена за сутки</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class='row'>
+    <div class='col-xs-12 col-sm-12 col-md-12 col-lg-12'>
+      <div style='border: 1px solid #fff;'></div>
+    </div>
+  </div>
+  <!-- noindex -->
+  <div class='order no-mrg-top'>
+    <div class='row row-custom-margin action'>
+      <div class='action-img-wrapper motorbike hidden-xs hidden-sm hidden-md'>
+        <%= image_tag 'red-img.png' %>
+        <span class='img-text'><%= round_number(page_meta.motorbike_discount_amount) %>%<br />скидка</span>
+      </div>
+      <div class='col-xs-12 col-sm-12 col-md-3 col-lg-4'>
+        <%= image_tag 'motorbike.jpg', class: 'img-responsive' %>
+      </div>
+      <div class='col-xs-12 col-sm-12 col-md-9 col-lg-8'>
+        <div class='row'>
+          <div class='col-xs-12 col-sm-12 col-md-6 col-lg-6'>
+            <div class='type-title'>Мопед</div>
+          </div>
+          <div class='col-xs-12 col-sm-12 col-md-6 col-lg-6'>
+            <%= link_to 'Заказать сейчас', '#', class: [:btn, 'btn-default', 'order-button', :large, 'center-block'], data: { toggle: 'modal', target: '#myModal' } %>
+          </div>
+        </div>
+        <div class='row'>
+          <div class='col-xs-12 col-sm-12 col-md-12 col-lg-12'>
+            <div class='new_price'><%= discount_price('motorbike') %>
+            <div class='upper'>руб</div>
+          </div>
+          <div class='old_price'><%= page_meta.motorbike_price %>
+          <div class='upper'>руб</div>
+        </div>
+        <div class='annotation'>Цена за сутки</div>
+      </div>
+    </div>
+  </div>
+</div>
+        </div>
+        <!-- /noindex -->
+      </div>
+    </div>
+    <!-- /order -->
+
+    <!-- table -->
+    <div class='row' id='price'>
+      <h2 class='header'>ЦЕНЫ</h2>
+      <div class='col-xs-12 col-sm-12 col-md-12 col-lg-12'>
+        <div class='table-responsive'>
+          <table class='table table-bordered table-hover price-table'>
+            <thead>
+              <th>Модель</th>
+              <th>за 1 час </th>
+              <th>на 1-5 дней</th>
+              <th>на 6-13 дней</th>
+              <th>свыше 13 дней</th>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Велосипед TXED AF-17 26'</td>
+                <td>100</td>
+                <td>320</td>
+                <td>250</td>
+                <td>200</td>
+              </tr>
+              <!-- noindex -->
+              <tr>
+                <td>Мопеды Racer Lupus 50</td>
+                <td>300</td>
+                <td>850</td>
+                <td>750</td>
+                <td>650</td>
+              </tr>
+              <!-- /noindex -->
+            </tbody>
+          </table>
+        </div>
+        <p class='colored'>* Есть детские велосипеды и кресла. Цена договорная, бронируйте заранее.</p>
+        <p class='colored'>* Доставка при заказе от 14 дней</p>
+      </div>
+    </div>
+    <!-- /table -->
+
+    <!-- map -->
+    <div class='row map-wrapper' id='rent'>
+      <h2 class='header'>ПУНКТЫ ПРОКАТА</h2>
+      <div class='col-xs-12 col-sm-12 col-md-6 col-lg-6'>
+        <div class='map'>
+          <span class='title'>
+            <p>Парк Победы</p>
+            <p>с 11:00 до 20:00</p>
+          </span>
+          <%= image_tag 'park-pobedy.jpg', class: 'img-responsive' %>
+        </div>
+      </div>
+      <div class='col-xs-12 col-sm-12 col-md-6 col-lg-6'>
+        <div class='map'>
+          <span class='title'>
+            <p>Автовокзал</p>
+            <p>с 11-00 до 20-00</p>
+          </span>
+          <%= image_tag 'avtovokzal.jpg', class: 'img-responsive' %>
+        </div>
+      </div>
+    </div>
+    <!-- /map -->
+
+    <!-- condition  -->
+    <div class='row condition-wrapper' id='conditions'>
+      <h2 class='header'>УСЛОВИЯ ПРОКАТА</h2>
+      <div class=' col-lg-2 col-md-2 col-sm-6 col-xs-6'>
+        <%= image_tag 'feature1.png', class: 'img-responsive center-block'%>
+        <div class='center-block title'>
+          Залог за мопед - <span class='highlighted'>3 000</span> рублей и любой из имеющихся документов
+        </div>
+      </div>
+      <div class='col-lg-2 col-md-2 col-sm-6 col-xs-6'>
+        <%= image_tag 'feature2.png', class: 'img-responsive center-block'%>
+        <div class='center-block title'>
+          Залог за велосипед - любой из имеющихся документов
+        </div>
+      </div>
+      <div class='col-lg-3 col-md-3 col-sm-12 col-xs-12'>
+        <%= image_tag 'feature3.png', class: 'img-responsive center-block'%>
+        <div class='center-block title'>
+          Паспорт, загранпаспорт, водительское удостоверение, страховой или любой другой документ для заключения договора аренды
+        </div>
+      </div>
+      <div class='col-lg-3 col-md-3 col-sm-6 col-xs-6'>
+        <%= image_tag 'feature4.png', class: 'img-responsive center-block'%>
+        <div class='center-block title'>
+          <span class='highlighted'>Обязательно</span> наличие у арендатора водительского удостоверения любой категории
+        </div>
+      </div>
+      <div class='col-lg-2 col-md-2 col-sm-6 col-xs-6'>
+        <%= image_tag 'feature5.png', class: 'img-responsive center-block'%>
+        <div class='center-block title'>
+          Минимальный срок аренды скутера — <span class='highlighted'>1</span> час
+        </div>
+      </div>
+      <div class='col-xs-12 col-sm-12 col-md-12 col-lg-12 condition-list'>
+        <ul>
+          <li><span>Стоимость услуги зависит от срока аренды и выбранной модели транспортного средства. Подробнее о стоимости проката вы можете узнать на соответствующей странице нашего сайта</span></li>
+          <li><span>Залог (возвращается по окончании срока аренды, если техника не повреждена) — 3000 рублей. Арендатор возмещает ущерб в полном объёме по рыночным расценкам, в т.ч., если стоимость ремонта превышает сумму залога.</span></li>
+          <li><span>Перед подписанием договора арендатор проходит вводный инструктаж</span></li>
+          <li><span>Обязательное соблюдение ПДД, а также использование защитного шлема</span></li>
+          <li><span>Возможна доставка техники к месту нахождения арендатора. Условия доставки предварительно обсуждаются по телефону</span></li>
+        </ul>
+      </div>
+    </div>
+    <!-- /condition  -->
+
+    <!-- future gallery -->
+    <!-- /future gallery  -->
+
+    <!-- contacts -->
+    <div class='row contacts-wrapper' id='contacts'>
+      <h2 class='header'>Контакты</h2>
+      <div class='contacts-content'>
+        <div class='col-xs-12 col-sm-12 col-md-3 col-lg-3'>
+          <%= image_tag 'widget.jpg', class: 'img-responsive'%>
+        </div>
+        <div class='col-xs-12 col-sm-12 col-md-9 col-lg-9'>
+          <div class='info'>
+            <p class='head'>ООО 'ЗнайГород'</p>
+            <p>Обособленное подразделение в г. Севастополь</p>
+            <p><span class='highlighted'>Юридический адрес:</span> г. Севастополь, ул. Воронина 10 офис 503</p>
+            <p>ОГРН 1137017006246</p>
+            <p>ИНН 7017327166</p>
+            <p>КПП 920445001</p>
+            <p><span class='highlighted'>Телефон:</span> +7 (978) 05 09 333</p>
+            <p><span class='highlighted'>E-mail:</span> <%= mail_to 'ss777@yandex.ru' %></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- /contacts -->
+    <!-- about -->
+    <div class='row about-wrapper'>
+      <h2 class='header'>О нас</h2>
+      <div class='col-xs-12 col-sm-12 col-md-12 col-lg-12'>
+        <% page_meta.introduction.split(/\r\n/).each do |part| %>
+          <p>
+            <%= part %>
+          </p>
+        <% end %>
+      </div>
+    </div>
+    <!-- /about -->
+
+    <!-- VKwidget -->
+    <div class='row about-wrapper'>
+      <div class='col-xs-12 col-sm-12 col-md-12 col-lg-12'>
+        <div id='vk_groups'></div>
+        <script type='text/javascript'>
+          VK.Widgets.Group('vk_groups', {mode: 2, width: 'auto', height: '500'}, <%= Settings['vk.group_id'] %>);
+        </script>
+      </div>
+    </div>
+    <!-- /VKwidget -->
   </div>
 </div>
 <%= render :partial => 'commons/modal_window' %>

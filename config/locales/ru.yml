@@ -3,6 +3,7 @@ ru:
     bicycle: Мета для велосипедов
     motorbike: Мета для мопедов
     kuplu_moped_velosiped: Мета для страницы "kuplu_moped_velosiped"
+    motocykli: Мета для мотоциклов
   enumerize:
     vehicle:
       bicycle: Велосипед

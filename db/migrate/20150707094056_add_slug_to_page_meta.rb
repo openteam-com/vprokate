@@ -3,6 +3,6 @@ class AddSlugToPageMeta < ActiveRecord::Migration
     add_column :page_meta, :slug, :string
 
     PageMeta.find(1).update_column(:slug, 'bicycle')
-    PageMeta.create(:slug => 'motorbike')
+    PageMeta.create(slug: 'motorbike')
   end
 end

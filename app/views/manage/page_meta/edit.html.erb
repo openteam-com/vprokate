@@ -4,7 +4,8 @@
     <%= flash[:notice] %>
   </div>
 <% end %>
-<%= simple_form_for [:manage, @page_meta], html: {class: '.form-horizontal' },
+
+<%= simple_nested_form_for [:manage, @page_meta], html: {class: '.form-horizontal' },
   wrapper: :horizontal_form,
   wrapper_mappings: {
      file: :horizontal_file_input
@@ -26,5 +27,19 @@
   <%= f.input :motorbike_discount_amount %>
   <%= f.input :motorbike_price %>
   <%= f.input :end_day, start_year: Date.today.year %>
+
+  <%= f.simple_fields_for :items do |ff| %>
+    <hr />
+    <%= ff.input :title %>
+    <%= ff.input :image, as: :file %>
+    <%= image_tag(ff.object.image_url, class: 'img-responsive') if ff.object.image_url.present? %>
+    <%= ff.input :description, input_html: { rows: 10 } %>
+    <%= ff.link_to_remove 'Удалить ТС' %>
+    <hr />
+  <% end %>
+
+  <%= f.link_to_add 'Добавить ТС', :items %>
+
+
   <%= f.button :submit, 'Сохранить', class: "pull-right" %>
 <% end %>

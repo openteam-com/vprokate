@@ -14,6 +14,6 @@ class CreatePageMeta < ActiveRecord::Migration
       t.date :end_day, default: Time.zone.now + 1.month
     end
 
-    PageMeta.create()
+    PageMeta.create
   end
 end

@@ -14,6 +14,7 @@ class PhoneOrdersController < ApplicationController
   end
 
   private
+
   def phone_order_params
     params.require(:phone_order).permit(:fullname, :phone, :vehicle)
   end

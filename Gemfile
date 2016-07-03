@@ -4,12 +4,13 @@ group :default do
   gem 'airbrake'
   gem 'bootstrap-sass', '~> 3.3.5'
   gem 'coffee-rails', '~> 4.1.0'
-  gem 'compass-rails', github: "Compass/compass-rails", branch: "master"
+  gem 'compass-rails', github: 'Compass/compass-rails', branch: 'master'
   gem 'configliere'
   gem 'enumerize'
   gem 'jbuilder', '~> 2.0'
   gem 'jquery-rails'
   gem 'mainsms_api'
+  gem 'nested_form'
   gem 'paperclip'
   gem 'paperclip-elvfs'
   gem 'pg'
@@ -23,9 +24,10 @@ group :default do
 end
 
 group :development, :test do
+  gem 'annotate'
+  gem 'awesome_print'
   gem 'byebug'
-  gem 'web-console', '~> 2.0'
-  gem 'spring'
   gem 'openteam-capistrano', '~> 1.0.7'
+  gem 'spring'
+  gem 'web-console', '~> 2.0'
 end
-
