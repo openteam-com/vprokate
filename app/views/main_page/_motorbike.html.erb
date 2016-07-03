@@ -11,33 +11,6 @@
     </div>
   </div>
 
-  <% if page_meta.items.present? %>
-    <div class='row image-wrapper hidden-xs hidden-sm'>
-      <% page_meta.items.each do |item| %>
-        <div class='col-xs-12 cols-sm-12 col-md-6 col-lg-6'>
-          <div class='bicycle'>
-            <div class='center-block title'><%= item.title %></div>
-            <div class='hit-img-wrapper hidden-xs'> <%= image_tag 'hit-img.png' %> </div>
-            <%= image_tag item.image_url, class: 'img-responsive' %>
-
-            <div class='ttc'>
-              <div class='table-responsive'>
-                <table class='table table-bordered'>
-                  <% item.description.split(/\r\n/).each do |row| %>
-                    <tr>
-                      <% row.split('|').each do |block| %>
-                        <td><%= block.squish %></td>
-                      <% end %>
-                    </tr>
-                  <% end %>
-                </table>
-              </div>
-            </div>
-          </div>
-        </div>
-      <% end %>
-    </div>
-  <% end %>
   <!-- /images -->
 
   <!-- order -->
@@ -180,6 +153,38 @@
       </div>
     </div>
     <!-- /table -->
+
+  <% if page_meta.items.present? %>
+    <div class='row image-wrapper hidden-xs hidden-sm'>
+      <% page_meta.items.each do |item| %>
+        <div class='col-xs-12 cols-sm-12 col-md-6 col-lg-6'>
+          <div class='bicycle'>
+            <div class='center-block title'><%= item.title %></div>
+
+            <% if item.hit %>
+              <div class='hit-img-wrapper hidden-xs'> <%= image_tag 'hit-img.png' %> </div>
+            <% end %>
+
+            <%= image_tag item.image_url.gsub(%r(/\d*-\d*/), %Q(/#{404}-#{238}!mn/)), class: 'img-responsive' %>
+
+            <div class='ttc'>
+              <div class='table-responsive'>
+                <table class='table table-bordered'>
+                  <% item.description.split(/\r\n/).each do |row| %>
+                    <tr>
+                      <% row.split('|').each do |block| %>
+                        <td><%= block.squish %></td>
+                      <% end %>
+                    </tr>
+                  <% end %>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  <% end %>
 
     <!-- map -->
     <div class="row map-wrapper" id='rent'>

@@ -32,6 +32,7 @@
     <hr />
     <%= ff.input :title %>
     <%= ff.input :image, as: :file %>
+    <%= ff.input :hit %>
     <%= image_tag(ff.object.image_url, class: 'img-responsive') if ff.object.image_url.present? %>
     <%= ff.input :description, input_html: { rows: 10 } %>
     <%= ff.link_to_remove 'Удалить ТС' %>
