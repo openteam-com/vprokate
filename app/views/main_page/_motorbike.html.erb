@@ -20,10 +20,6 @@
         <div class="row">
           <div class="col-xs-12 col-sm-12 col-md-8 col-lg-6 left">
             <div class="pull-right action need-padding">
-              <div class="action-img-wrapper bicycle">
-                <%= image_tag 'red-img.png' %>
-                <span class='img-text'><%= round_number(page_meta.bicycle_discount_amount) %>%<br />скидка</span>
-              </div>
               <p class="colored title">
                 Бесплатная доставка! *
               </p>
@@ -86,45 +82,6 @@
       </div>
     </div>
     <!-- /order -->
-
-    <!-- table -->
-    <div class="row" id='price'>
-      <h2 class="header">ЦЕНЫ</h2>
-      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-        <div class="table-responsive">
-          <table class="table table-bordered table-hover price-table">
-            <thead>
-              <th>Модель</th>
-              <th>за 1 час </th>
-              <th>на 1-5 дней</th>
-              <th>на 6-13 дней</th>
-              <th>свыше 13 дней</th>
-            </thead>
-            <tbody>
-              <!-- noindex -->
-              <tr>
-                <td>Велосипед TXED AF-17 26'</td>
-                <td>100</td>
-                <td>320</td>
-                <td>250</td>
-                <td>200</td>
-              </tr>
-              <!-- /noindex -->
-              <tr>
-                <td>Мопеды Racer Lupus 50</td>
-                <td>300</td>
-                <td>850</td>
-                <td>750</td>
-                <td>650</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-        <p class='colored'>* Есть детские велосипеды и кресла. Цена договорная, бронируйте заранее.</p>
-        <p class='colored'>* Доставка при заказе от 14 дней</p>
-      </div>
-    </div>
-    <!-- /table -->
 
   <% if page_meta.items.present? %>
     <div class='row image-wrapper hidden-xs hidden-sm'>
