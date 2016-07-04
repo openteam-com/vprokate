@@ -10,11 +10,13 @@ $ ->
     language: 'russian'
   })
 
-  $(".js-scroll").click ->
-    selected = $(this).attr("href")
+  $('.js-scroll').click ->
+    selected = $(this).attr('href')
     $.scrollTo $(selected).offset().top-120, 750
 
     false
+
+  $.scrollTo $(window.location.hash).offset().top-120, 750 if window.location.hash
 
   $('#phone_order_phone').inputmask 'mask',
     'mask': '+7-(999)-999-9999'
