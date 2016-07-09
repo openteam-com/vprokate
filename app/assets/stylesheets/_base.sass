@@ -315,3 +315,37 @@ nav
   a
     img
       margin-bottom: 4px
+
+.carousel-inner
+  .item
+    img
+      width: 420px
+
+    .img
+      position: relative
+
+      .title
+        background-color: #537598
+        position: absolute
+        font-size: 16px
+        color: white
+        padding: 5px 10px
+        left: 0
+        top: 0
+
+        p
+          margin: 0
+
+          &:last-child
+            font-size: 14px
+            color: #b8c7d8
+
+    &.more-img
+      .img
+        +inline-block
+
+      img
+        +inline-block
+
+.carousel-control
+  width: 5%
